@@ -2,7 +2,6 @@
   "name": "soroban-hello-world-dapp",
   "version": "0.1.0",
   "private": true,
-  
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -14,7 +13,8 @@
     "build-contracts": "soroban contract bindings typescript --wasm ./target/wasm32-unknown-unknown/release/soroban_modified_hello_world_contract.wasm --id $(cat ./.soroban/hello_world_id) --output-dir ./.soroban/hello-world-contract --network \"$(cat ./.soroban-example-dapp/network)\" --overwrite"
   },
   "dependencies": {
-    "@radix-ui/react-dialog": "1.0.2",
+    "@creit.tech/stellar-wallets-kit": "^0.9.0",
+    "@radix-ui/react-dialog": "^1.0.2",
     "@stellar/freighter-api": "^2.0.0",
     "@stellar/stellar-sdk": "^12.1.0",
     "axios": "^0.27.2",
@@ -30,9 +30,9 @@
   },
   "devDependencies": {
     "@types/humanize-duration": "^3.27.1",
-    "@types/node": "17.0.30",
-    "@types/react": "18.0.28",
-    "@types/react-dom": "18.0.11",
+    "@types/node": "^20.0.0",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
     "eslint": "^8.14.0",
     "eslint-config-next": "^13.3.1",
     "typescript": "^5.5.2"

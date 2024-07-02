@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { isConnected, getUserInfo } from "@stellar/freighter-api";
+import { stellarWalletsKit } from "../lib/stellarWalletsKit";
 
 let address: string;
 
 let addressLookup = (async () => {
-  if (await isConnected()) return getUserInfo()
+  // if (await isConnected()) return getUserInfo()
+  if (await stellarWalletsKit.getPublicKey()) return {publicKey: await stellarWalletsKit.getPublicKey()}
 })();
 
 // returning the same object identity every time avoids unnecessary re-renders

@@ -13,6 +13,7 @@ import {
   BASE_FEE,
   TransactionBuilder,
 } from "@stellar/stellar-sdk";
+import { stellarWalletsKit } from "../../../lib/stellarWalletsKit";
 
 export class HelloContract extends Contract {
   rpc: SorobanRpc.Server;

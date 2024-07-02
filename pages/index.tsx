@@ -4,6 +4,7 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { HelloWorld } from "../components/organisms";
 import { WalletData } from "../components/molecules";
+import { HelloElliot } from "../components/organisms";
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
       </header>
       <main className={styles.main}>
         <div className={styles.content}>
+          <HelloElliot />
           <HelloWorld />
         </div>
       </main>
